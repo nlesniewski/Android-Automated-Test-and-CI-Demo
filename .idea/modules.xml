@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Automated-Test-And-CI.iml" filepath="$PROJECT_DIR$/Automated-Test-And-CI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Android-Automated-Test-and-CI-Demo.iml" filepath="$PROJECT_DIR$/Android-Automated-Test-and-CI-Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
