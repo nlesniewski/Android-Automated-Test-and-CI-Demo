@@ -1,5 +1,4 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-//apply from: 'jacoco.gradle'
 
 buildscript {
     repositories {
@@ -7,28 +6,9 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.2.2'
-        classpath 'com.dicedmelon.gradle:jacoco-android:0.1.1'
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-    }
-}
-
-allprojects {
-
-    ext {
-        // Android config
-        androidBuildToolsVersion = '25.0.0'
-        applicationId = 'kevalpatel2106.com.automated_test_and_ci'
-        minSdkVersion = 16
-        compileSdkVersion = 25
-        targetSdkVersion = 25
-        versionCode = 1
-        versionName = '1.0'
-    }
-
-    repositories {
-        jcenter()
-        mavenCentral()
     }
 }
 
