@@ -2,13 +2,9 @@ language: android
 jdk: oraclejdk8
 sudo: false
 
-notifications:
-    email:
-        - kevalpatel2106@gmail.com
-
 env:
     matrix:
-        - ANDROID_TARGET=android-19 ANDROID_ABI=armeabi-v7a
+        #- ANDROID_TARGET=android-19 ANDROID_ABI=armeabi-v7a
         - ANDROID_TARGET=android-21 ANDROID_ABI=armeabi-v7a
     global:
         - ADB_INSTALL_TIMEOUT=10    #Time out to 10 mins
@@ -36,13 +32,14 @@ android:
         - extra-android-m2repository
 
         #system images
-        - sys-img-armeabi-v7a-android-19
+        #- sys-img-armeabi-v7a-android-19
         - sys-img-armeabi-v7a-android-21
 
 licenses:
-    - 'android-sdk-preview-license-52d11cd2'
-    - 'android-sdk-license-.+'
-    - 'google-gdk-license-.+'
+    - '.+'
+    #- 'android-sdk-preview-license-52d11cd2'
+    #- 'android-sdk-license-.+'
+    #- 'google-gdk-license-.+'
 
 before_script:
     - chmod +x gradlew      #Grand permissions
@@ -58,10 +55,10 @@ script:
     - adb shell input keyevent 82 &
     - ./gradlew connectedCheck coveralls -PdisablePreDex --stacktrace
 
-before_install:
-    - pip install --user codecov    #Install codecov
+#before_install:
+#    - pip install --user codecov    #Install codecov
 
-after_success:
-    - codecov                       #Run codecov
+#after_success:
+#    - codecov                       #Run codecov
 
-after_failure: "cat $TRAVIS_BUILD_DIR/app/build/outputs/lint-results-debug.xml"
+#after_failure: "cat $TRAVIS_BUILD_DIR/app/build/outputs/lint-results-debug.xml"
